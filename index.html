@@ -26,7 +26,7 @@
     --metal: linear-gradient(100deg, #8a5f12 0%, #f4dc8f 38%, #c9952c 58%, #f6e3a4 78%, #9a6f1c 100%);
     --display: 'Big Shoulders Display', 'Oswald', Impact, sans-serif;
     --body: 'Instrument Sans', 'Helvetica Neue', Arial, sans-serif;
-    --max: 1180px;
+    --max: 1440px;
   }
   /* ============================================================ */
 
@@ -35,10 +35,10 @@
   .wb a { color: inherit; text-decoration: none; }
   .wb :focus-visible { outline: 2px solid var(--gold-hi); outline-offset: 3px; border-radius: 6px; }
   .wb h1, .wb h2, .wb h3 { font-family: var(--display); font-weight: 800; line-height: .98; letter-spacing: .005em; }
-  .wb-wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+  .wb-wrap { max-width: var(--max); margin: 0 auto; padding: 0 clamp(24px, 4vw, 72px); }
   .wb-sec { padding: 120px 0; position: relative; }
-  .wb-h2 { font-size: clamp(40px, 6vw, 76px); max-width: 15ch; }
-  .wb-intro { color: var(--muted); font-size: 19px; max-width: 54ch; margin-top: 22px; }
+  .wb-h2 { font-size: clamp(40px, 5.4vw, 84px); max-width: 20ch; }
+  .wb-intro { color: var(--muted); font-size: 19px; max-width: 62ch; margin-top: 22px; }
 
   /* Buttons */
   .wb-btn { position: relative; display: inline-flex; align-items: center; justify-content: center; gap: 10px; font-family: var(--body); font-weight: 700; font-size: 16px; padding: 17px 30px; border-radius: 999px; background: var(--metal); background-size: 200% 100%; background-position: 0% 0; color: #1a1205; border: 0; cursor: pointer; overflow: hidden; transition: background-position .6s ease, transform .2s ease, box-shadow .2s ease; box-shadow: 0 10px 30px -10px rgba(214,174,82,.55), inset 0 1px 0 rgba(255,255,255,.45); }
@@ -62,10 +62,10 @@
   .wb-hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.05fr 1fr; gap: 40px; align-items: center; }
   .wb-hero-grid > *, .wb-nights-grid > *, .wb-split > *, .wb-fit-grid > *, .wb-book-grid > *, .wb-faq-grid > * { min-width: 0; }
   .wb h1, .wb h2 { overflow-wrap: break-word; }
-  .wb-hero h1 { font-size: clamp(56px, 6.6vw, 98px); text-transform: uppercase; letter-spacing: -.005em; }
+  .wb-hero h1 { font-size: clamp(56px, 6.2vw, 112px); text-transform: uppercase; letter-spacing: -.005em; }
   .wb-hero h1 span { display: inline; }
   .wb-hero h1 .wb-metal { background: var(--metal); -webkit-background-clip: text; background-clip: text; color: transparent; }
-  .wb-hero-copy p { color: var(--muted); font-size: 19px; max-width: 46ch; margin: 28px 0 36px; }
+  .wb-hero-copy p { color: var(--muted); font-size: 19px; max-width: 54ch; margin: 28px 0 36px; }
   .wb-hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; }
   .wb-hero-meta { margin-top: 30px; display: flex; gap: 28px; flex-wrap: wrap; font-size: 14px; color: var(--muted); }
   .wb-hero-meta div { display: flex; align-items: center; gap: 9px; }
@@ -142,7 +142,7 @@
   .wb-step { position: relative; }
   .wb-step-num { font-family: var(--display); font-weight: 900; font-size: 116px; line-height: .9; color: transparent; -webkit-text-stroke: 1.5px var(--gold); margin-bottom: 26px; position: relative; display: inline-block; background: var(--black); padding-right: 14px; }
   .wb-step h3 { font-size: 34px; text-transform: uppercase; margin-bottom: 14px; }
-  .wb-step p { color: var(--muted); font-size: 16.5px; max-width: 34ch; }
+  .wb-step p { color: var(--muted); font-size: 16.5px; max-width: 42ch; }
 
   /* INCLUDED */
   .wb-split { display: grid; grid-template-columns: .9fr 1.1fr; gap: 80px; align-items: start; }
@@ -186,12 +186,12 @@
   .wb-faq summary::-webkit-details-marker { display: none; }
   .wb-faq summary::after { content: ""; position: absolute; right: 6px; top: 50%; width: 14px; height: 14px; margin-top: -9px; border-right: 2px solid var(--gold); border-bottom: 2px solid var(--gold); transform: rotate(45deg); transition: transform .3s ease; }
   .wb-faq details[open] summary::after { transform: rotate(-135deg); margin-top: -2px; }
-  .wb-faq details p { color: var(--muted); padding: 0 40px 26px 0; max-width: 62ch; }
+  .wb-faq details p { color: var(--muted); padding: 0 40px 26px 0; max-width: 72ch; }
 
   /* FINAL */
   .wb-final { text-align: center; padding: 140px 0 150px; border-top: 1px solid var(--line); background: radial-gradient(700px 360px at 50% 100%, rgba(214,174,82,.14), transparent 70%); }
-  .wb-final h2 { font-size: clamp(48px, 8vw, 110px); text-transform: uppercase; max-width: 13ch; margin: 0 auto; background: var(--metal); -webkit-background-clip: text; background-clip: text; color: transparent; }
-  .wb-final p { color: var(--muted); font-size: 19px; max-width: 48ch; margin: 26px auto 38px; }
+  .wb-final h2 { font-size: clamp(48px, 8vw, 120px); text-transform: uppercase; max-width: 16ch; margin: 0 auto; background: var(--metal); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .wb-final p { color: var(--muted); font-size: 19px; max-width: 58ch; margin: 26px auto 38px; }
 
   /* FOOTER */
   .wb-footer { border-top: 1px solid var(--line); padding: 34px 0; color: var(--muted); font-size: 14px; }
@@ -220,7 +220,7 @@
     .wb-night, .wb-fit-card { padding: 30px 24px; }
   }
   @media (max-width: 600px) {
-    .wb-wrap { padding: 0 18px; }
+    .wb-wrap { padding: 0 16px; }
     .wb-hero h1 { font-size: clamp(44px, 14vw, 64px); }
     .wb-h2 { font-size: clamp(36px, 10.5vw, 48px); }
     .wb-final h2 { font-size: clamp(40px, 12vw, 60px); }
